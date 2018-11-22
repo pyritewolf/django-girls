@@ -11,16 +11,18 @@
         <h1>My cool blog</h1>
     <header>
     <main>
+        {% for post in posts %}
         <article>
             <div>
                 <h2>
-                    <a href="#">Titulo</a>
-                    <span class="author"></span>
+                    <a href="#">{{ post.title }}</a>
+                    <span class="author">{{ post.author.username }}</span>
                 <h2>
-                <span>Publicado el FECHA<span>
+                <span>Publicado el {{ post.published_date }}<span>
             </div>
-            <p>Texto</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </article>
+        {% endfor %}
     </main>
 </body>
 </html>
