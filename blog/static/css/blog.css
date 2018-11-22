@@ -74,6 +74,18 @@ header a {
 
 main {
     padding: 20px;
+    min-height: calc(100vh - 120px);
+}
+
+footer {
+    color: #ddd;
+    background-color: #0054A8;
+    padding: 20px;
+}
+
+footer a {
+    font-weight: bold;
+    color: #fff;
 }
 
 article {
