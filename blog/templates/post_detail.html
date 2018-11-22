@@ -5,9 +5,10 @@
         <div class="header">
             <h2>
                 {{ post.title }}
+                <a class="button accent" href="{% url 'post_edit' pk=post.pk %}"><i class="icon ion-ios-create"></i></a>
                 <span class="author">{{ post.author.username }}</span>
             </h2>
-            <span class="published">Publicado el {{ post.published_date }}<span>
+            <span class="published">Publicado el {{ post.published_date }}</span>
         </div>
         <p>{{ post.text|linebreaksbr }}</p>
     </article>
