@@ -68,6 +68,10 @@ header {
     align-items: center;
 }
 
+header div > * {
+    margin-left: 15px;
+}
+
 header a {
     color: #eee;
 }
