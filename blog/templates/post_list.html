@@ -1,32 +1,16 @@
-{% load staticfiles %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My cool blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Niramit" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-</head>
-<body>
-    <header>
-        <h1>My cool blog</h1>
-    </header>
-    <main>
-        {% for post in posts %}
+{% block content %}
+    {% for post in posts %}
         <article>
             <div class="header">
                 <h2>
-                    <a href="#">{{ post.title }}</a>
+                    <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
                     <span class="author">{{ post.author.username }}</span>
                 </h2>
                 <span class="published">Publicado el {{ post.published_date }}<span>
             </div>
             <p>{{ post.text|linebreaksbr }}</p>
         </article>
-        {% endfor %}
-    </main>
-</body>
-</html>
+    {% endfor %}
+{% endblock %}

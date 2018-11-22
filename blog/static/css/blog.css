@@ -22,10 +22,13 @@ a {
 header {
     padding: 10px 20px;
     background-color: #333;
-    color: #eee;
     border-bottom: 1px solid #222;
     box-shadow: 0 0 20px #666;
     z-index: 99;
+}
+
+header a {
+    color: #eee;
 }
 
 main {
@@ -66,4 +69,14 @@ article .author {
 article .published {
     font-size: 0.7rem;
     color: #444;
+}
+
+article#post {
+    font-size: 1.5rem;
+    padding: 30px;
+}
+
+article#post .header {
+    margin: -30px -30px 30px -30px;
+    padding: 30px
 }
