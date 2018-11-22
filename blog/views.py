@@ -8,7 +8,7 @@ def post_list(request):
     return render(request, 'post_list.html', {'posts': posts})
 
 def post_detail(request, pk):
-    post = Post.objects.get_object_or_404(pk=pk)
+    post = get_object_or_404(Post, pk=pk)
     return render(request, 'post_detail.html', {'post': post})
 
 def post_new(request):
