@@ -6,6 +6,7 @@ body {
 
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 h1, h2, h3 {
@@ -19,12 +20,46 @@ a {
     color: #7D4187;
 }
 
+input, textarea, button {
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    background-color: #FFF;
+}
+
+button {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: Allerta Stencil, sans-serif;
+    font-size: 1.1rem;
+}
+
+button.accent {
+    color: #eee;
+    background-color: #7D4187;
+    transition: 0.5s;
+}
+
+button.accent:hover {
+    background-color: #0054A8;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.icon {
+    font-size: 2rem;
+}
+
 header {
     padding: 10px 20px;
     background-color: #333;
     border-bottom: 1px solid #222;
     box-shadow: 0 0 20px #666;
     z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header a {
@@ -79,4 +114,19 @@ article#post {
 article#post .header {
     margin: -30px -30px 30px -30px;
     padding: 30px
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+form p label {
+    font-size: 1.2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
 }

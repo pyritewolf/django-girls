@@ -8,11 +8,16 @@
     <title>My cool blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Niramit" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.4.7/dist/css/ionicons.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
     <header>
         <h1><a href="/">My cool blog</a></h1>
+        <a href="{% url 'post_new' %}">
+            <i class="icon ion-ios-add"></i>
+        </a>
     </header>
     <main>
         {% block content %}
